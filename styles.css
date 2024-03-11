@@ -12,33 +12,39 @@ body {
     text-align: center;
   }
   
-  main {
+  .container {
     display: flex;
-    justify-content: space-between;
+  }
+  
+  aside {
+    background-color: #f0f0f0;
     padding: 20px;
+    min-width: 200px;
   }
   
-  #projects, #todos {
-    flex: 1;
-    margin-right: 20px;
+  nav ul {
+    list-style-type: none;
+    padding: 0;
   }
   
-  .project, .todo {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+  nav ul li {
     margin-bottom: 10px;
   }
   
-  .project h2, .todo h3 {
-    margin-top: 0;
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
   }
   
-  .todo {
-    cursor: pointer;
+  nav ul li a:hover {
+    color: #000;
   }
   
-  .todo:hover {
-    background-color: #f0f0f0;
+  main {
+    padding: 20px;
+  }
+  
+  #tasks, #projects, #daily-tasks {
+    display: none;
   }
   

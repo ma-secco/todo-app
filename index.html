@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Lista de Tarefas</title>
+  <title>Todo List App</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,14 +11,31 @@
     <h1>Todo List App</h1>
   </header>
   
-  <main>
-    <div id="projects">
-      <!-- Projects will be dynamically added here -->
-    </div>
-    <div id="todos">
-      <!-- Todos will be dynamically added here -->
-    </div>
-  </main>
+  <div class="container">
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#tasks">Tarefas</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#daily-tasks">Tarefas do Dia</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main>
+      <div id="tasks">
+        <!-- Tarefas serão adicionadas aqui -->
+      </div>
+      
+      <div id="projects">
+        <!-- Projetos serão adicionados aqui -->
+      </div>
+      
+      <div id="daily-tasks">
+        <!-- Tarefas do dia serão adicionadas aqui -->
+      </div>
+    </main>
+  </div>
 
   <footer>
     <p>&copy; 2024 Todo List App</p>
