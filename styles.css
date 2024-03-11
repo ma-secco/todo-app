@@ -1,0 +1,44 @@
+/* Basic styles for the app */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  #projects, #todos {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .project, .todo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .project h2, .todo h3 {
+    margin-top: 0;
+  }
+  
+  .todo {
+    cursor: pointer;
+  }
+  
+  .todo:hover {
+    background-color: #f0f0f0;
+  }
+  
