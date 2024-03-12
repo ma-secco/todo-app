@@ -63,9 +63,10 @@ body {
   }
   
   footer{
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      margin-top: auto; 
+    height: min-content;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; 
   }
