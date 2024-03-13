@@ -6,4 +6,19 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Adiciona as folhas de estilo ao DOM injetando a tag <style>
+          'style-loader',
+          // Permite importar arquivos CSS/Sass
+          'css-loader',
+          // Compila Sass para CSS
+          'sass-loader',
+        ],
+      },
+    ],
+  },
 };
