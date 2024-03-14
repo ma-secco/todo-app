@@ -9,7 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
           // Adiciona as folhas de estilo ao DOM injetando a tag <style>
           'style-loader',
