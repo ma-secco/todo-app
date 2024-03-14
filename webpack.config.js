@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -12,14 +13,17 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src'), // Novo padrão de correspondência para a pasta styles
         use: [
-          // Adiciona as folhas de estilo ao DOM injetando a tag <style>
-          'style-loader',
-          // Permite importar arquivos CSS/Sass
+          MiniCssExtractPlugin.loader,
           'css-loader',
-          // Compila Sass para CSS
-          'sass-loader',
+          'sass-loader'
         ],
       },
     ],
   },
+  plugins: [
+    // Plugin para extrair o CSS em um arquivo separado
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })
+  ]
 };
