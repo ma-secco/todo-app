@@ -43,6 +43,9 @@ nav ul {
     nav ul li a:focus {
       color: #000; }
 
+nav h3 {
+  font-family: "Playfair Display", serif; }
+
 main {
   padding: 20px;
   flex: 1; }
