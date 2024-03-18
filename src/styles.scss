@@ -37,7 +37,8 @@ body {
     min-width: 200px;
   }
   
-  nav ul {
+  nav {
+    ul {
     list-style-type: none;
     padding: 0.25rem;
     li {
@@ -55,6 +56,10 @@ body {
         }
      }
     }
+    h3 {
+      font-family: $title-font;
+    }
+  }
   
   main {
     padding: 20px;
