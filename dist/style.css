@@ -1,2 +1,64 @@
-body{font-family:"Montserrat",sans-serif;margin:0;padding:0;min-height:100vh;display:flex;flex-direction:column}header,footer{background-color:#333;color:#fff;padding:10px;text-align:center}h1{font-family:"Playfair Display",serif;font-weight:800}.container{display:flex;flex:1}aside{background-color:#f0f0f0;padding:20px;min-width:200px}nav ul{list-style-type:none;padding:0.25rem}nav ul li{margin-bottom:10px;padding:0.25rem}nav ul li a{text-decoration:none;color:#333;font-weight:400}nav ul li a:hover,nav ul li a:active,nav ul li a:focus{color:#000}nav h3{font-family:"Playfair Display",serif}main{padding:20px;flex:1}#tasks,#projects,#daily-tasks{display:none}footer{height:min-content;font-size:12px;background-color:#333;color:#fff;padding:4px;text-align:center;margin-top:auto}
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**********************************************************************************************************/
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center; }
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800; }
+
+.container {
+  display: flex;
+  flex: 1; }
+
+aside {
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-width: 200px; }
+
+nav ul {
+  list-style-type: none;
+  padding: 0.25rem; }
+  nav ul li {
+    margin-bottom: 10px;
+    padding: 0.25rem; }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 400; }
+    nav ul li a:hover,
+    nav ul li a:active,
+    nav ul li a:focus {
+      color: #000; }
+
+nav h3 {
+  font-family: "Playfair Display", serif; }
+
+main {
+  padding: 20px;
+  flex: 1; }
+
+#tasks, #projects, #daily-tasks {
+  display: none; }
+
+footer {
+  height: min-content;
+  font-size: 12px;
+  background-color: #333;
+  color: #fff;
+  padding: 4px;
+  text-align: center;
+  margin-top: auto; }
 
