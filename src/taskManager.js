@@ -1,3 +1,5 @@
+import projects from "./projectManager";
+
 const tasks = (() => {
     class Task {
         constructor(title, details, schedule) {
@@ -6,7 +8,7 @@ const tasks = (() => {
             this.schedule = schedule;
             this.done = false;
             this.important = false;
-            this.project = 
+            this.project = ''
             this.id = this.getID();
     };
     getID() {
@@ -29,19 +31,16 @@ const tasks = (() => {
     function editTask(taskId, updatedData) {
         const taskIndex = taskList.findIndex(task => task.id === taskId);
         if (taskIndex !== -1) {
-            // Atualize os dados da tarefa existente com os dados atualizados
             Object.assign(taskList[taskIndex], updatedData);
-            return taskList[taskIndex]; // Retorna a tarefa atualizada
-        } else return null; // Retorna null se a tarefa não for encontrada
+            return taskList[taskIndex]; 
+        } else return null; 
 
     }
     
     function deleteTask(taskId) {
-        // Remova a tarefa pelo ID
         const taskIndex = taskList.findIndex(task => task.id === taskId);
         if (taskIndex !== -1) {
-            // Apagar objeto 
-           taskList.splice(taskList[taskIndex], 1);
+           taskList.splice(taskIndex, 1);
       } else return null;
     }
 
@@ -50,8 +49,27 @@ const tasks = (() => {
         if (taskIndex !== -1) {
           taskList[taskIndex].done = true;
         }
-      }
+    }
 
+    function assignProjectToTask(projectName, taskId) {
+        const project = projects.projectsList.find(project => project.name === projectName);
+        const task = taskList.find(task => task.id === taskId);
+        
+        if (project && task) {
+            task.project = project;
+            project.tasks.push(task);
+            return true; // Retorna verdadeiro se a atribuição for bem-sucedida
+        }
+    }
+
+      return{
+        taskList,
+        createTask,
+        editTask,
+        deleteTask,
+        completeTask,
+        assignProjectToTask
+      }
 
 }) ();
 
