@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/dataManager.js":
+/*!****************************!*\
+  !*** ./src/dataManager.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _taskManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./taskManager */ \"./src/taskManager.js\");\n/* harmony import */ var _projectManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projectManager */ \"./src/projectManager.js\");\n\r\n\r\n\r\nconst data = (() => {\r\n    function saveData() {\r\n        localStorage.setItem('projects', JSON.stringify(_projectManager__WEBPACK_IMPORTED_MODULE_1__[\"default\"].projectsList));\r\n        localStorage.setItem('tasks', JSON.stringify(_taskManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"].taskList));\r\n    }\r\n\r\n    function loadData() {\r\n        const savedProjects = localStorage.getItem('projects');\r\n        const savedTasks = localStorage.getItem('tasks');\r\n\r\n        if (savedProjects && savedTasks) {\r\n            _projectManager__WEBPACK_IMPORTED_MODULE_1__[\"default\"].projectsList = JSON.parse(savedProjects);\r\n            _taskManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"].taskList = JSON.parse(savedTasks);\r\n        }\r\n    }\r\n\r\n    window.addEventListener('load', () => {\r\n        loadData();\r\n    });\r\n\r\n    window.addEventListener('beforeunload', () => {\r\n        saveData();\r\n    });\r\n\r\n    return {\r\n        saveData,\r\n        loadData\r\n    };\r\n})();\n\n//# sourceURL=webpack://todo-app/./src/dataManager.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n/* harmony import */ var _taskManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./taskManager */ \"./src/taskManager.js\");\n/* harmony import */ var _projectManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projectManager */ \"./src/projectManager.js\");\n\r\n\r\n\n\n//# sourceURL=webpack://todo-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n/* harmony import */ var _taskManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./taskManager */ \"./src/taskManager.js\");\n/* harmony import */ var _projectManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projectManager */ \"./src/projectManager.js\");\n/* harmony import */ var _dataManager__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dataManager */ \"./src/dataManager.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://todo-app/./src/index.js?");
 
 /***/ }),
 
