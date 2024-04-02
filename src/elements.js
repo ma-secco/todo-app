@@ -17,7 +17,7 @@ class Elements {
 
         list.forEach(task => {
             const taskDiv = document.createElement('div');
-            taskDiv.setAttribute('className','taskDiv');
+            taskDiv.classList.add('taskDiv');
             sectionList.appendChild(taskDiv);
 
             // colocar "done" mark
@@ -32,24 +32,15 @@ class Elements {
 
             const editBt = document.createElement('button');
             editBt.setAttribute('value', 'Editar');
-            editBt.setAttribute('className', 'editBt');
+            editBt.classList.add('editBt');
             taskDiv.appendChild(editBt);
 
             const deletetask = document.createElement('div');
             deletetask.innerHTML = `<i class="fi fi-tr-x"></i>`;
             deletetask.setAttribute('id',`${task.id}`);
+            taskDiv.appendChild(deletetask);
             
 
-
-
-
-
-
-
-
-
-
-            
         });
 
 
