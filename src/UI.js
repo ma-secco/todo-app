@@ -2,6 +2,10 @@ import projects from "./projectManager.js";
 import tasks from "./taskManager.js";
 
 const UI = (() => {
+
+    const body = document.querySelector('body');
+        
+
     
     const projectListContainer = document.getElementById('projectList');
     const taskListContainer = document.getElementById('taskList');

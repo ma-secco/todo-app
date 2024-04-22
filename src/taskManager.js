@@ -8,7 +8,7 @@ const tasks = (() => {
             this.schedule = schedule;
             this.done = false;
             this.important = false;
-            this.project = ''
+            this.project = '';
             this.id = this.getID();
     };
     getID() {

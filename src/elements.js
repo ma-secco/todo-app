@@ -1,3 +1,4 @@
+import { sub } from "date-fns";
 import projects from "./projectManager.js";
 import tasks from "./taskManager.js";
 
@@ -40,34 +41,49 @@ class Elements {
             deletetask.setAttribute('id',`${task.id}`);
             taskDiv.appendChild(deletetask);
             
-
         });
-
-
-
-
-
-
 
         return sectionList
     }
 
-    static showPageTasks (title, list){
-        
-
-
-    }
-
- 
-
-
-
-
-
-
 	static NewTaskDiv(){
-        const taskSection = document.createElement("div");
+        showTasks.innerHTML = '';
+        const formSection = document.createElement("section");
+        showTasks.appendChild(formSection);
+
+        const taskForm = document.createElement('form');
+        taskForm.setAttribute('id', 'taskForm');
+        formSection.appendChild(taskForm);
+
+        const title = document.createElement('input');
+        title.setAttribute('type', 'text');
+        title.setAttribute('name', 'title');
+        title.setAttribute('id', 'taskForm');
+        title.setAttribute('placeholder', 'Título tarefa');
+
+        const details = document.createElement('textarea');
+        details.classList.add('details');
+        details.setAttribute('name', 'details');
+        details.setAttribute('placeholder', 'Detalhes...');
+        details.setAttribute('rows', '4'); 
+        details.setAttribute('cols', '50');
+
+        const schedule = document.createElement('input');
+        schedule.setAttribute('type', 'date');
+        schedule.setAttribute('name', 'schedule');
+        schedule.setAttribute('id', 'taskForm');
+
+        const submitBt = document.createElement('input');
+        submitBt.setAttribute('type', 'submit');
+        submitBt.setAttribute('value', 'Criar Tarefa');
+        submitBt.setAttribute('id', 'taskForm');
+        submitBt.setAttribute('name','submitBt');
+
+        taskForm.appendChild(title, details, schedule, submitBt)
+
+        return formSection;
     }
+
 }
 
 export default Elements;
