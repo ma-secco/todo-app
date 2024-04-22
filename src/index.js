@@ -6,6 +6,8 @@ import UI from './UI';
 import Elements from './elements';
 
 
+const addTask = document.querySelector('#add');
+
 // Por exemplo, você pode chamar a função para carregar os dados salvos quando a página é carregada
 window.addEventListener('load', () => {
     loadData();
@@ -14,9 +16,10 @@ window.addEventListener('load', () => {
     Elements.ShowTaskSection('Tarefas', tasks.taskList)
 });
 
-// Ou você pode adicionar manipuladores de eventos para os formulários de adição de projetos e tarefas
-const projectForm = document.getElementById('projectForm');
-const taskForm = document.getElementById('taskForm');
+addTask.addEventListener('click', Elements.NewTaskDiv())
+
+// Por fim, você pode chamar a função para exibir os projetos na interface do usuário
+UI.displayProjects();
 
 projectForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -31,6 +34,3 @@ taskForm.addEventListener('submit', event => {
 
     dataValidation.validateTaskData(taskTitle, taskSchedule);
 });
-
-// Por fim, você pode chamar a função para exibir os projetos na interface do usuário
-UI.displayProjects();
