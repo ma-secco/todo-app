@@ -1,7 +1,3 @@
-import { sub } from "date-fns";
-import projects from "./projectManager.js";
-import tasks from "./taskManager.js";
-
 const showTasks = document.querySelector("#tasks");
 const addProjectBt = document.querySelector("#projects")
 
@@ -58,8 +54,9 @@ class Elements {
         const title = document.createElement('input');
         title.setAttribute('type', 'text');
         title.setAttribute('name', 'title');
-        title.setAttribute('id', 'taskForm');
+        title.setAttribute('id', 'taskTitle');
         title.setAttribute('placeholder', 'Título tarefa');
+        title.setAttribute('form', 'taskForm');
 
         const details = document.createElement('textarea');
         details.classList.add('details');
@@ -67,19 +64,25 @@ class Elements {
         details.setAttribute('placeholder', 'Detalhes...');
         details.setAttribute('rows', '4'); 
         details.setAttribute('cols', '50');
+        details.setAttribute('form', 'taskForm');
 
         const schedule = document.createElement('input');
         schedule.setAttribute('type', 'date');
         schedule.setAttribute('name', 'schedule');
-        schedule.setAttribute('id', 'taskForm');
+        schedule.setAttribute('id', 'taskSchedule');
+        schedule.setAttribute('form', 'taskForm');
 
         const submitBt = document.createElement('input');
         submitBt.setAttribute('type', 'submit');
         submitBt.setAttribute('value', 'Criar Tarefa');
-        submitBt.setAttribute('id', 'taskForm');
+        submitBt.setAttribute('id', 'taskSubmit');
         submitBt.setAttribute('name','submitBt');
+        submitBt.setAttribute('form', 'taskForm');
 
-        taskForm.appendChild(title, details, schedule, submitBt)
+        taskForm.appendChild(title);
+        taskForm.appendChild(details);
+        taskForm.appendChild(schedule);
+        taskForm.appendChild(submitBt);
 
         return formSection;
     }

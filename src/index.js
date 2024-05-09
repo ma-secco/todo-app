@@ -8,6 +8,7 @@ import Elements from './elements';
 
 const addTask = document.querySelector('#add');
 
+
 // Por exemplo, você pode chamar a função para carregar os dados salvos quando a página é carregada
 window.addEventListener('load', () => {
     loadData();
@@ -16,10 +17,9 @@ window.addEventListener('load', () => {
     Elements.ShowTaskSection('Tarefas', tasks.taskList)
 });
 
-addTask.addEventListener('click', Elements.NewTaskDiv())
+addTask.addEventListener('click', Elements.NewTaskDiv)
 
-// Por fim, você pode chamar a função para exibir os projetos na interface do usuário
-UI.displayProjects();
+
 
 projectForm.addEventListener('submit', event => {
     event.preventDefault();
